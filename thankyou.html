@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/random/1920x1080/?thank-you'); /* Random background image */
+            background-size: cover;
+            background-position: center;
+            color: black; /* White text for contrast */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        /* Heading styles */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+        }
+
+        /* Paragraph styles */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button styles */
+        .button {
+            background-color: #007BFF; /* Button background color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none; /* Remove underline from links */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You for Attending the Test !</h1>
+    <p>Your responses have been submitted successfully.</p>
+    <p id="scoreDisplay"></p>
+
+    <a href="index.html" class="button">Go Back to Home</a> <!-- Example button for navigation -->
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const regex = /([^&=]+)=([^&]*)/g;
+            let m;
+
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            return params;
+        }
+
+        // Retrieve score from URL parameters
+        const params = getUrlParams();
+        const score = params.score || 'N/A';
+        const total = params.total || 'N/A';
+
+        // Display score
+        document.getElementById('scoreDisplay').innerText = `Your score is ${score} out of ${total}.`;
+    </script>
+</body>
+</html>

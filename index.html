@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text for contrast */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            text-align: center;
+            padding: 2rem 0; /* Padding for spacing */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem; /* Larger font size for heading */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+        }
+
+        /* Navigation styles */
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center; /* Center navigation items */
+            flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+        }
+
+        nav a {
+            color: white; /* White text for links */
+            margin: 0 15px; /* Margin between links */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Bold text */
+            padding: 10px 15px; /* Padding around links */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        nav a:hover {
+            background-color: #FFD700; /* Gold background on hover */
+            color: #007BFF; /* Blue text on hover */
+        }
+
+        /* Section styles */
+        section {
+            padding: 2rem;
+            text-align: center; /* Center text */
+        }
+
+        h2 {
+            font-size: 2rem; /* Larger font size for subheading */
+            margin-bottom: 1rem; /* Margin below heading */
+        }
+
+        p {
+            font-size: 1.2rem; /* Readable font size for paragraph */
+            line-height: 1.5; /* Line height for better readability */
+        }
+
+        /* Quote styles */
+        .quotes {
+            background-color: #ffffff; /* White background for quotes */
+            border-left: 5px solid #007BFF; /* Blue left border */
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px; /* Limit width of quotes box */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .quotes p {
+            font-style: italic; /* Italicize quotes */
+            font-size: 1.5rem; /* Larger font size for quotes */
+            margin: 0; /* Remove margin */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Smaller font size on small screens */
+            }
+
+            nav a {
+                margin: 0 10px; /* Adjust margin on small screens */
+                font-size: 0.9rem; /* Smaller font size for links */
+            }
+
+            .quotes p {
+                font-size: 1.2rem; /* Smaller font size for quotes on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Assessment Platform</h1>
+        <nav>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Our Platform</h2>
+        <p>This is a simple platform for online assessments. Users can sign up, log in, and access their assessments easily.</p>
+    </section>
+    
+    <section>
+        <div class="quotes">
+            <p>"The beautiful thing about learning is that no one can take it away from you." - B.B. King</p>
+            <p>"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
+            <p>"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</p>
+        </div>
+    </section>
+</body>
+</html>
